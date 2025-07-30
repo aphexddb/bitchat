@@ -1,8 +1,8 @@
-CC=gcc
-CFLAGS=-Ivendor/libsodium/include -Wall -Wextra -O2
-LDFLAGS=vendor/libsodium/lib/libsodium.a
+CC=clang
+CFLAGS=-Ivendor/libsodium/include -Iinclude -Wall -Wextra -O2
+LDFLAGS=-lsodium
 TARGET=bitchat
-SRC=src/main.c
+SRC=src/main.c src/bitchat_protocol.c
 
 all: $(TARGET)
 

@@ -1,13 +1,14 @@
 # bitchat
 
-This repository contains a minimal hello world written in C. It demonstrates a basic setup
-using [libsodium](https://github.com/jedisct1/libsodium) for cryptographic primitives and
-includes a vendored copy of the ESP-IDF template.
+bitchat in C for portability to ESP32 devices. Requires libsodium because implementing crypto is dumb.
+
+A decentralized peer-to-peer messaging app that works over Bluetooth mesh networks. No internet required, no servers, no phone numbers. It's the side-groupchat.
 
 ## Building
 
-The project uses `make` with `gcc`. The only dependency is the vendored
-`libsodium` library located under `vendor/libsodium`.
+The project uses `make` with `clang`. The only dependency is the
+`libsodium` library, available as a system package or prebuilt under
+`vendor/libsodium`.
 
 To build the hello world executable run:
 
